@@ -103,11 +103,11 @@ main {
   line-height: 1.7;
 }
 
-.manifesto-link {
+.creed p.manifesto-link {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   letter-spacing: 0.03em;
-  margin: 1.25rem 0 0;
+  margin: 2.5rem 0 0;
 }
 
 .manifesto-link a {

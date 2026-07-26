@@ -81,12 +81,12 @@ Waitlist block:
 - No wellness clichés: "hehkuva iho", "palauttava", "holistinen" — out.
 
 ## Email capture
-- Brevo (EU) embedded form, double opt-in ON. Style the embed with our tokens —
-  if Brevo's widget can't be styled cleanly, use a plain HTML form posting to Brevo's
-  form endpoint instead.
+- MailerLite (EU) plain HTML form posting directly to MailerLite's form endpoint,
+  styled with our tokens (not their embedded widget).
 - No cookies, no analytics, no tracking scripts → no cookie banner. Keep it that way.
   If analytics are ever requested: privacy-first (e.g. GoatCounter), still no banner.
-- A one-paragraph tietosuoja note at `#tietosuoja`, linked from the consent line.
+- A one-paragraph tietosuoja note lives on its own page (`tietosuoja.html`), linked
+  from the consent line.
 
 ## Workflow
 - One change at a time; show the diff before any restructure.

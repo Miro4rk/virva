@@ -22,11 +22,10 @@
     <p class="tagline">Haluamme tuoda punavaloterapian Suomeen.</p>
 
     <section class="creed">
-      <!-- Placeholder copy only — restore approved creed text before launch. -->
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Sisällä elämisen sekä tulipesien kadon myötä suomen kansa ei enää saa
+        terveydelle suotuisaa puna- ja infrapunavaloannosta. Me haluamme tuoda
+        nämä nykyelämästä puuttuvat aallonpituudet jokaisen suomalaisen kotiin.
       </p>
       <p class="manifesto-link"><a href="./manifesto.html">Lue manifesti</a> · <a href="./meista.html">Meistä</a></p>
     </section>
@@ -36,10 +35,12 @@
     <section class="waitlist">
       <p>Jätä sähköpostisi, niin saat päivityksiä ensimmäisen erän edistymisestä.</p>
 
-      <!-- TODO: replace action with the Brevo (EU) form endpoint / list ID once created. -->
-      <form class="waitlist__form" action="#" method="post">
+      <form class="waitlist__form" method="post"
+            action="https://assets.mailerlite.com/jsonp/2534885/forms/194073840324708017/subscribe">
         <label for="email" class="visually-hidden">Sähköposti</label>
-        <input type="email" id="email" name="email" placeholder="matti.meikalainen@gmail.com" required>
+        <input type="email" id="email" name="fields[email]" placeholder="osta.virva@protonmail.com" required autocomplete="email">
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
         <button type="submit">Liity listalle</button>
       </form>
 
