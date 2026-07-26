@@ -3,10 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Virva</title>
+  <title>Virva Light Co.</title>
+  <meta name="description" content="Virva Light Co. — valaisimia ja valohoitolaitteita, jotka tuovat auringon mitattavat ominaisuudet sisälle.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Virva</h1>
-  <p>mitattu, ei väitetty</p>
+  <header class="lockup">
+    <!-- Emblem slot: Brocken spectre SVG (rough silhouette, precise glory rings) arrives later. Do not improvise a placeholder graphic here. -->
+    <h1 class="lockup__full">Virva Light Co<span class="red">.</span></h1>
+  </header>
+
+  <main>
+    <p class="tagline">Haluamme tuoda punavaloterapian Suomeen.</p>
+
+    <section class="creed">
+      <!-- Placeholder copy only — restore approved creed text before launch. -->
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p class="manifesto-link"><a href="./manifesto.html">Lue manifesti</a> · <a href="./meista.html">Meistä</a></p>
+    </section>
+
+    <p class="spec-tease">Erä 001 on suunniteltu olevan valmis lähetettäväksi lokakuussa 2026</p>
+
+    <section class="waitlist">
+      <p>Jätä sähköpostisi, niin saat päivityksiä ensimmäisen erän edistymisestä.</p>
+
+      <!-- TODO: replace action with the Brevo (EU) form endpoint / list ID once created. -->
+      <form class="waitlist__form" action="#" method="post">
+        <label for="email" class="visually-hidden">Sähköposti</label>
+        <input type="email" id="email" name="email" placeholder="matti.meikalainen@gmail.com" required>
+        <button type="submit">Liity listalle</button>
+      </form>
+
+      <p class="consent">Emme lähetä turhia sähköposteja. Lue <a href="./tietosuoja.html">tietosuojaseloste</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Virva Photonics Oy · Otaniemi, Finland · Batch 001</span>
+  </footer>
 </body>
 </html>

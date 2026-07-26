@@ -1,0 +1,249 @@
+:root {
+  --black: #0c0b0a;   /* page background — near-black, warm */
+  --ink:   #f2ede1;   /* primary text — warm white, never #fff */
+  --dim:   #8a8478;   /* secondary text */
+  --faint: #5c574e;   /* tertiary, captions */
+  --rule:  #262420;   /* hairline borders */
+  --red:   #b5442f;   /* 660 nm accent — the ONLY non-neutral on the site */
+  --font-display: 'Michroma', sans-serif;      /* wordmark, headings, model names */
+  --font-mono: 'IBM Plex Mono', monospace;     /* data, serials, spec lines, footer */
+  --font-prose: 'Barlow', sans-serif;          /* body copy */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--black);
+}
+
+body {
+  margin: 0;
+  padding: 0 1.25rem;
+  background: var(--black);
+  color: var(--ink);
+  font-family: var(--font-prose);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--ink);
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.red {
+  color: var(--red);
+}
+
+/* Lockup */
+
+.lockup {
+  padding: 4rem 0 2.5rem;
+  text-align: center;
+}
+
+.lockup__full {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: bold;
+  -webkit-text-stroke: 0.6px currentColor;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+/* Main content */
+
+main {
+  flex: 1;
+  max-width: 32rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tagline {
+  margin: 0;
+  padding-top: 1.5rem;
+  font-family: var(--font-prose);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.creed {
+  padding: 1.5rem 0;
+}
+
+.creed p {
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.manifesto-link {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.03em;
+  margin: 1.25rem 0 0;
+}
+
+.manifesto-link a {
+  color: var(--dim);
+}
+
+.manifesto-link a:hover,
+.manifesto-link a:focus-visible {
+  color: var(--ink);
+}
+
+.spec-tease {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.03em;
+  color: var(--dim);
+  margin: 2rem 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+/* Waitlist */
+
+.waitlist {
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.waitlist h2 {
+  font-family: var(--font-prose);
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin: 0 0 0.75rem;
+}
+
+.waitlist > p {
+  margin: 0 0 1.25rem;
+  color: var(--dim);
+}
+
+.waitlist__form {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.waitlist__form input {
+  flex: 1 1 14rem;
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  font-family: var(--font-prose);
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.waitlist__form input::placeholder {
+  color: var(--faint);
+}
+
+.waitlist__form button {
+  background: var(--red);
+  color: var(--ink);
+  border: none;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.consent {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--faint);
+  margin: 1rem 0 0;
+}
+
+.consent a {
+  color: var(--faint);
+}
+
+/* Manifesto page */
+
+.page {
+  flex: 1;
+  max-width: 32rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 4rem 0 2.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--dim);
+  margin-bottom: 2.5rem;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--ink);
+}
+
+.page h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 1.5rem;
+}
+
+.page p {
+  margin: 0 0 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+/* Footer */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 32rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--faint);
+}
