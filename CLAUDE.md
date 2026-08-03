@@ -1,19 +1,20 @@
 # Virva — pre-launch site
 
-Static teaser for Virva Light Co. (legal: Virva Photonics Oy, founding in progress) — a Finnish
-light-therapy and healthy-lighting company. Purpose: establish the brand's visual identity,
-collect waitlist emails, tease an October launch. Nothing else. Resist scope growth.
+Static teaser for Virva Light Co. (legal: Virva Photonics Oy, founding in progress) — a Finnish light-therapy and healthy-lighting company. 
+Purpose: establish the brand's visual identity, collect waitlist emails, tease an October launch. Nothing else. Resist scope growth.
 
 ## Stack & deployment
 - Plain HTML + CSS. No frameworks, no build step, no npm, no JS unless a component strictly needs it.
-- Hosted on GitHub Pages, currently served from a `/virva/` project subpath.
+- Hosted on GitHub Pages. Custom domain: `virvalight.com` (via `CNAME` file) — temporary,
+  since the intended domain `virvalight.fi` isn't available yet due to domain issues; swap
+  the `CNAME` file and update absolute URLs (MailerLite redirect) once `.fi` is secured.
   ALL asset paths relative (`./style.css`, `./assets/…`) — never root-absolute. This must
-  survive the later move to the custom domain (virvalight.fi + CNAME file) unchanged.
+  survive future domain changes unchanged.
 - Local preview: `python3 -m http.server` in repo root. Test at 375 px width first.
 - Files: `index.html`, `style.css`, `/assets/` (SVG + images). One page. New pages only if asked.
 
 ## Design tokens
-Site is dark-theme only. No light mode. All values live in one `:root` block; never
+All values live in one `:root` block; never
 hardcode a color/size elsewhere.
 
 ```css
@@ -59,17 +60,10 @@ Finnish is the primary and only v1 language (`lang="fi"`). Hand-written EN versi
 Phase 1.1 (`/en/`), never machine-translated.
 
 Creed (draft v1, Artturi approves final):
-> Aurinko on kaiken elämän lähde. Ihmiskeho on rakennettu elämään sen valossa —
-> silti vietämme päivämme sisätiloissa. Virva suunnittelee ja valmistaa valaisimia
-> ja valohoitolaitteita, jotka tuovat auringon mitattavat ominaisuudet sisälle.
-> Ei lupauksia — spektrejä, irradianssia, dataa.
-> Mitattu, ei väitetty.
-
-Waitlist block:
-- Heading: `Ensimmäinen erä on pieni.`
-- Body: `Jätä sähköpostisi, niin kuulet ensimmäisenä.`
-- Button: `Liity listalle`
-- Consent line (mono, faint): `Ei uutiskirjetulvaa. Osoitteesi ei liiku eteenpäin.`
+> Aurinko on kaiken elämän lähde. Ihmiskeho on rakennettu elämään sen valossa.
+> Kuitenkin nykyään vietämme paljon aikaa sisätiloissa. Virva suunnittelee ja valmistaa valaisimia
+> ja valohoitolaitteita, jotka tuovat ulkotilan ominaisuudet sisälle.
+> Ei lupauksia vaan dataa.
 
 ## Copy tone — hard rules
 - Declarative sentences. No exclamation marks, no emoji, no superlatives
@@ -81,12 +75,10 @@ Waitlist block:
 - No wellness clichés: "hehkuva iho", "palauttava", "holistinen" — out.
 
 ## Email capture
-- MailerLite (EU) plain HTML form posting directly to MailerLite's form endpoint,
-  styled with our tokens (not their embedded widget).
+- Maillite embedded form, double opt-in ON. Style the embed with our tokens
 - No cookies, no analytics, no tracking scripts → no cookie banner. Keep it that way.
   If analytics are ever requested: privacy-first (e.g. GoatCounter), still no banner.
-- A one-paragraph tietosuoja note lives on its own page (`tietosuoja.html`), linked
-  from the consent line.
+- A one-paragraph tietosuoja note at `#tietosuoja`, linked from the consent line.
 
 ## Workflow
 - One change at a time; show the diff before any restructure.
