@@ -240,6 +240,31 @@ main {
   line-height: 1.7;
 }
 
+.page .meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--faint);
+  margin: -1rem 0 2rem;
+}
+
+.page h2 {
+  font-family: var(--font-prose);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.page ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.page li {
+  margin: 0 0 0.25rem;
+}
+
 /* Footer */
 
 .site-footer {
