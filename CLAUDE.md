@@ -1,12 +1,12 @@
-# Virva — pre-launch site
+# Valmo — pre-launch site
 
-Static teaser for Virva Light Co. (legal: Virva Photonics Oy, founding in progress) — a Finnish light-therapy and healthy-lighting company. 
+Static teaser for Valmo Light Co. (legal: Valmo Oy, founding in progress) — a Finnish light-therapy and healthy-lighting company. 
 Purpose: establish the brand's visual identity, collect waitlist emails, tease an October launch. Nothing else. Resist scope growth.
 
 ## Stack & deployment
 - Plain HTML + CSS. No frameworks, no build step, no npm, no JS unless a component strictly needs it.
 - Hosted on GitHub Pages. Custom domain: `virvalight.com` (via `CNAME` file) — temporary,
-  since the intended domain `virvalight.fi` isn't available yet due to domain issues; swap
+  since the intended domain `valmolight.fi` isn't available yet due to domain issues; swap
   the `CNAME` file and update absolute URLs (MailerLite redirect) once `.fi` is secured.
   ALL asset paths relative (`./style.css`, `./assets/…`) — never root-absolute. This must
   survive future domain changes unchanged.
@@ -31,7 +31,7 @@ hardcode a color/size elsewhere.
 }
 ```
 
-- Red is rationed: the period in "VIRVA LIGHT CO." lockup, at most one or two other
+- Red is rationed: the period in "VALMO LIGHT CO." lockup, at most one or two other
   points per viewport. If red appears in a third place, remove one.
 - Google Fonts: Michroma 400; IBM Plex Mono 400/500; Barlow 400/500/600.
   `preconnect` + `display=swap`.
@@ -47,11 +47,11 @@ hardcode a color/size elsewhere.
   No charm pricing ever (no ,99).
 
 ## Page structure (in order)
-1. Lockup: VIRVA (display, large) over VIRVA LIGHT CO. (small, tracked, red period on "CO.")
+1. Lockup: VALMO (display, large) over VALMO LIGHT CO. (small, tracked, red period on "CO.")
 2. Creed (approved copy below, ~5 lines, prose font, generous whitespace)
 3. Spec tease line (mono): `Erä 001 — kolme laitetta — lokakuu 2026`
 4. Email capture (see below)
-5. Footer: left `mitattu, ei väitetty` · right `Virva Light Co. · Suomi · No. 001`
+5. Footer: left `mitattu, ei väitetty` · right `Valmo Light Co. · Suomi · No. 001`
 Emblem (Brocken spectre: rough silhouette in precise glory rings) arrives later as SVG;
 leave a commented slot above the lockup, don't improvise one.
 
@@ -61,7 +61,7 @@ Phase 1.1 (`/en/`), never machine-translated.
 
 Creed (draft v1, Artturi approves final):
 > Aurinko on kaiken elämän lähde. Ihmiskeho on rakennettu elämään sen valossa.
-> Kuitenkin nykyään vietämme paljon aikaa sisätiloissa. Virva suunnittelee ja valmistaa valaisimia
+> Kuitenkin nykyään vietämme paljon aikaa sisätiloissa. Valmo suunnittelee ja valmistaa valaisimia
 > ja valohoitolaitteita, jotka tuovat ulkotilan ominaisuudet sisälle.
 > Ei lupauksia vaan dataa.
 
